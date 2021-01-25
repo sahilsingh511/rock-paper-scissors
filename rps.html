@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>rock-paper-scissors</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="rps.css">
+</head>
+
+<body>
+    <h1>Rock-Paper-Scissors</h1>
+    <div class="ruler">
+        <div class="game">
+            <h3>The Rule of Game:</h3>
+            <p>Rock breaks scissors, scissors cuts paper, paper covers rock.</p>
+        </div>
+        <div class="button">
+            <button class="rock" id="rock">Rock</button>
+            <button class="paper" id="paper">Paper</button>
+            <button class="scissors" id="scissors">Scissors</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    let x;
+    let rock = document.querySelector('.rock');
+    let paper = document.querySelector('.paper');
+    let scissors = document.querySelector('.scissors');
+    let array = [rock, paper, scissors]; //you can use querySelectorAll() for buttons too.
+
+    for (let i = 0; i < array.length; i++) {
+        array[i].addEventListener('click', fun);
+    }
+
+    function fun(arr) {
+        let random = Math.floor(Math.random(x) * 3); //Value changes every time, an event is triggered.
+        console.log("Computer: ", array[random].innerText); //array[random].id can also be used in place of innerText.
+        if (arr.target.id === "rock") {
+            if (random === 0) {
+                alert('It\'s a tie b/w you and computer!');
+            }
+            if (random === 1) {
+                alert('Paper wraps you, you lose!');
+            }
+            if (random === 2) {
+                alert('You break the scissors, you win!');
+            }
+
+        }
+        if (arr.target.id === "paper") {
+            if (random === 0) {
+                alert('You wrap rock, you win!');
+            }
+            if (random === 1) {
+                alert('It\'s a tie b/w you and computer!');
+            }
+            if (random === 2) {
+                alert('Scissors cut your paper, you lose!');
+            }
+        }
+        if (arr.target.id === "scissors") {
+            if (random === 0) {
+                alert('scissors are broken by rock, you lose!');
+            }
+            if (random === 1) {
+                alert('You cut the paper, you win!');
+            }
+            if (random === 2) {
+                alert('It\'s a tie b/w you and computer!');
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

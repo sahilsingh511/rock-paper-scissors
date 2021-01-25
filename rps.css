@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 100%;
+    overflow: hidden;
+    font-family: Comic Sans MS;
+}
+
+body {
+    background: linear-gradient(to right, lightgreen, aqua);
+}
+
+.game {
+    padding: 1.2rem;
+}
+h1{
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+}
+
+h1,
+h3,
+p {
+    text-align: center;
+    padding: 1rem;
+}
+
+.ruler {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+.button * {
+	font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: lightgreen;
+    outline: none;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 5px 6px 10px);
+}
